@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sistema de venda e reserva de ingressos de cinema. Escolha filme, sessão, assentos e gere seu ingresso.">
+<title>Cine Fácil — Ingressos de Cinema</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">🎬 <span>Cine</span>Fácil</div>
+  <nav>
+    <a href="#filmes">Filmes</a>
+    <a href="#como-funciona">Como funciona</a>
+    <button id="ordersBtn" class="ghost">🎟️ Meus ingressos</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="badge">INGRESSOS ONLINE</span>
+    <h1>Escolha seu filme.<br><strong>Reserve seu lugar.</strong></h1>
+    <p>Um sistema moderno de venda de ingressos pronto para publicar no GitHub Pages.</p>
+    <a class="primary" href="#filmes">Ver filmes</a>
+  </div>
+  <div class="hero-card">🍿<br><small>Seu cinema<br>na palma da mão</small></div>
+</section>
+
+<section id="filmes" class="section">
+  <div class="section-title">
+    <div><span class="eyebrow">PROGRAMAÇÃO</span><h2>Filmes em cartaz</h2></div>
+    <select id="filterGenre"><option value="todos">Todos os gêneros</option></select>
+  </div>
+  <div id="movies" class="movie-grid"></div>
+</section>
+
+<section id="how" class="how">
+  <div><b>1</b><h3>Escolha o filme</h3><p>Veja a programação e selecione uma sessão.</p></div>
+  <div><b>2</b><h3>Escolha os assentos</h3><p>Monte seu lugar diretamente no mapa da sala.</p></div>
+  <div><b>3</b><h3>Confirme</h3><p>Gere o ingresso digital e apresente o código na entrada.</p></div>
+</section>
+
+<section id="como-funciona" class="info">
+  <span class="eyebrow">SISTEMA</span>
+  <h2>Uma base pronta para seu projeto</h2>
+  <p>Esta versão funciona no navegador e salva as reservas no <b>localStorage</b>. Para vendas reais, o próximo passo é conectar um backend, banco de dados e um gateway de pagamento.</p>
+</section>
+</main>
+
+<footer>© 2026 Cine Fácil · Projeto demonstrativo para GitHub Pages</footer>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-box">
+    <button class="close" id="closeModal">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
